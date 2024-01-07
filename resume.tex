@@ -1,0 +1,179 @@
+%-------------------------
+% Fullstack Developer Resume in Latex
+% Author : Dan Li
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{mathtools} 
+\usepackage{amsmath} 
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\projectSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \(|\) \textit{#2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectItem}[1]{
+  \item\small{
+    #1 \vspace{-2pt}
+  }
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[left=0em]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large{Dan Li}} & Email : \href{mailto:d22li@uwaterloo.ca}{\underline{d22li@uwaterloo.ca}}\\
+  \href{https://github.com/danmxli}{\underline{https://github.com/danmxli}} & Mobile : +1-647-675-6975 \\
+\end{tabular*}
+
+
+%--------SKILLS------------
+\section{Skills}
+
+     \small\textbf{Languages}{: Python, Typescript, Javascript, C/C++, SQL, Java, Bash}
+     \newline
+     \small\textbf{Tools, Databases, Platforms}{: Git, MongoDB, PostgreSQL, Docker, AWS}
+     \newline
+     \small\textbf{Libraries and Frameworks}{: React.js, NumPy, Flask, Django, FastAPI, PyTorch, Next.js, Express.js}
+
+
+%-----------WORK EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Onlia Insurance}{Toronto, ON}
+      {Automation Developer}{May 2023 - Aug 2023}
+      \resumeItemListStart
+        \resumeItem{Regression Testing}
+          {Led the development of a regression testing tool using Selenium with Java, and TestNG.}
+        \resumeItem{Test Optimization}
+          {Leveraged Java interfaces to define default implementations for Page Object Models, resulting in a 38\% increase in regression test coverage.}
+        \resumeItem{Reporting}
+          {Refined Selenium WebDriver exception handling capabilities, resulting in a 15\% reduction in the occurrence of incorrect pass-fail reporting instances.}
+        \resumeItem{Business-logic Testing}
+          {Configured and executed a back-end project to perform integration tests for policy binding and account activation services.}
+        \resumeItem{Data Retrieval}
+          {Developed a SOAP web service to retrieve data for policy binding and activation; utilized the JDBC API with PostgreSQL for program-to-database communication.}
+        \resumeItem{File Writing}
+          {Configured Excel writing capabilities with Apache POI to generate spreadsheets of activated accounts for automated testing usage, resulting in a 23\% increase in QA resources.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+  \projectSubheading{\href{https://github.com/ericqiu04/project}{\underline{Instagram Marketing and Content Growth Service}}}{Typescript, Python, PostgreSQL}
+      \resumeItemListStart
+        \projectItem{Worked in a 2-man team to build a SaaS for content creators to boost their digital presence; architected an Instagram hashtag recommendation API with Django REST framework.}
+        \projectItem{Implemented RLS and Postgres policies to restrict CRUD operations per user and prevent unauthorized row access.}
+        \projectItem{Leveraged the ResNet50 neural network with PyTorch for image classification to refine Instagram hashtag generation per post.}
+      \resumeItemListEnd
+
+  \projectSubheading{\href{https://github.com/danmxli/Conduify}{\underline{Agent-integrated Interview Preparation Tool}}}{Typescript, Python, MongoDB}
+      \resumeItemListStart
+        \projectItem{Developed an agent capable of interview simulation and resume evaluation with Cohere and OpenAI's LLMs.}
+        \projectItem{Utilized Beautiful Soup to scrape data from the applicant's company of interest; leveraged PDF parsing modules in Python to refine hierarchical information extraction from applicant resume.}
+        \projectItem{Used MongoDB vector database to store company and resume data as query and document embeddings; relevancy of resume contexts to company data were determined by the dot product of the respective vectors.}
+        \projectItem{Reduced hallucinations by grounding the model on contexts, improving LLM generation to build human trust.}
+      \resumeItemListEnd
+    \projectSubheading{\href{https://github.com/danmxli/seePickle}{\underline{Productivity Visualization Tool - Hackfest November 2023}}}{Typescript, Python, MongoDB}
+      \resumeItemListStart
+        \projectItem{Architected the UI, REST API, and schema models to build and deploy a cloud-based planning tool with Cohere's LLMs. Won the "Best Use of MongoDB Atlas" and "Best Use of Auth0" awards.}
+        \projectItem{Designed MongoDB aggregation pipelines to optimize CRUD operations, achieving over 8.5x faster performance than manual iteration into document data.}
+        \projectItem{Leveraged the React Flow library to display sequential data as an interactive node-based flowchart.}
+        \projectItem{Developed authentication-required routes with a "redirect" functionality to safeguard user-sensitive data.}
+      \resumeItemListEnd
+    \projectSubheading{\href{https://github.com/danmxli/ChicSplain}{\underline{YouTube Content Analysis Chatbot - Hack The Valley 8}}}{Python, MongoDB}
+      \resumeItemListStart
+        \projectItem{Collaborated in a team of 4 to build a Chatbot as a Service with Cohere's LLMs; led development of the REST API to provide the business-logic layer and user management. Won the "Best Use of MongoDB Atlas" award.}
+        \projectItem{Integrated the YouTube Data API with string searching algorithms to optimize video context summarization.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Waterloo, ON}
+      {Candidate for Computer Engineering Honours, Co-operative Program}{Sept 2022 -- Apr 2028}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
